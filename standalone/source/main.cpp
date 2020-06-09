@@ -1,16 +1,16 @@
-#include <greeter/greeter.h>
-#include <greeter/version.h>
+#include <imgdiff/imgdiff.h>
+#include <imgdiff/version.h>
 
 #include <cxxopts.hpp>
 #include <iostream>
 #include <string>
 #include <unordered_map>
 
-const std::unordered_map<std::string, greeter::LanguageCode> languages{
-    {"en", greeter::LanguageCode::EN},
-    {"de", greeter::LanguageCode::DE},
-    {"es", greeter::LanguageCode::ES},
-    {"fr", greeter::LanguageCode::FR},
+const std::unordered_map<std::string, imgdiff::LanguageCode> languages{
+    {"en", imgdiff::LanguageCode::EN},
+    {"de", imgdiff::LanguageCode::DE},
+    {"es", imgdiff::LanguageCode::ES},
+    {"fr", imgdiff::LanguageCode::FR},
 };
 
 int main(int argc, char** argv) {
@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
     std::cout << options.help() << std::endl;
     return 0;
   } else if (result["version"].as<bool>()) {
-    std::cout << "Greeter, version " << GREETER_VERSION << std::endl;
+    std::cout << "Greeter, version " << IMGDIFF_VERSION << std::endl;
     return 0;
   }
 
@@ -44,8 +44,8 @@ int main(int argc, char** argv) {
     return 1;
   }
 
-  greeter::Greeter greeter(name);
-  std::cout << greeter.greet(langIt->second) << std::endl;
+  imgdiff::Imgdiff imgdiff(name);
+  std::cout << imgdiff.greet(langIt->second) << std::endl;
 
   return 0;
 }

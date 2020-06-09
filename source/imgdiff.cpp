@@ -1,10 +1,11 @@
-#include <greeter/greeter.h>
+#include <imgdiff/imgdiff.h>
+#include <cxxopts.hpp>
 
-using namespace greeter;
+using namespace imgdiff;
 
-Greeter::Greeter(std::string _name) : name(_name) {}
+Imgdiff::Imgdiff(std::string _name) : name(_name) {}
 
-std::string Greeter::greet(LanguageCode lang) const {
+std::string Imgdiff::greet(LanguageCode lang) const {
   switch (lang) {
     default:
     case LanguageCode::EN:

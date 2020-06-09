@@ -2,23 +2,23 @@
 
 #include <string>
 
-namespace greeter {
+namespace imgdiff {
 
-  /**  Language codes to be used with the Greeter class */
+  /**  Language codes to be used with the Imgdiff class */
   enum class LanguageCode { EN, DE, ES, FR };
 
   /**
    * A class for saying hello in multiple languages
    */
-  class Greeter {
+  class Imgdiff {
     std::string name;
 
   public:
     /**
-     * Creates a new greeter
+     * Creates a new imgdiff
      * @param name the name to greet
      */
-    Greeter(std::string name);
+    Imgdiff(std::string name);
 
     /**
      * Creates a localized string containing the greeting
@@ -28,4 +28,4 @@ namespace greeter {
     std::string greet(LanguageCode lang = LanguageCode::EN) const;
   };
 
-}  // namespace greeter
+}  // namespace imgdiff

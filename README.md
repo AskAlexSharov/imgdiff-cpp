@@ -32,7 +32,7 @@ This template is the result of learnings from many previous projects and should 
 
 ### Adjust the template to your needs
 
-- Use this repo [as a template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) and replace all occurrences of "Greeter" in the relevant CMakeLists.txt with the name of your project
+- Use this repo [as a template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) and replace all occurrences of "Imgdiff" in the relevant CMakeLists.txt with the name of your project
 - Replace the source files with your own
 - For header-only libraries: see the comments in [CMakeLists.txt](CMakeLists.txt)
 - Add [your project's codecov token](https://docs.codecov.io/docs/quick-start) to your project's github secrets under `CODECOV_TOKEN`
@@ -48,7 +48,7 @@ Use the following command to build and run the executable target.
 ```bash
 cmake -Hstandalone -Bbuild/standalone
 cmake --build build/standalone
-./build/standalone/Greeter --help
+./build/standalone/Imgdiff --help
 ```
 
 ### Build and run test suite
